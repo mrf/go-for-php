@@ -116,7 +116,6 @@ func main() {
 
 ## Functions
 ```
-func Abs(x T) float64
 func add(x int, y int) int
 func ReadByte() (c byte, err error)
 ```

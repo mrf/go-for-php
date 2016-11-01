@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title></title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="reveal.js/css/reveal.css"/>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="reveal.js/css/theme/simple.css" id="theme">
+    <!-- For syntax highlighting using highlight.js-->
+    <link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+  <link rel="stylesheet" href="css/custom.css"/>
+  <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+  <script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = 'reveal.js/css/print/pdf.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+  </script>
+  <!--[if lt IE 9]>
+  <script src="reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+
+<section id="go-for-php-developers" class="slide level1">
+<h1>Go for PHP Developers</h1>
+</section>
+<section id="follow-along" class="slide level1">
+<h1>Follow along</h1>
+<ul>
+<li class="fragment">mrf.github.io/go-for-php</li>
+</ul>
+</section>
+<section id="me" class="slide level1">
+<h1>Me</h1>
+<ul>
+<li class="fragment">Director of Engineering at Chapter Three</li>
+<li class="fragment">PHP'n since 2003</li>
+<li class="fragment">Golang'n since 2014</li>
+</ul>
+</section>
+<section id="background" class="slide level1">
+<h1>Background</h1>
+<section id="section" class="level2">
+<h2></h2>
+<p>&quot;Go is efficient, scalable, and productive. Some programmers find it fun to work in; others find it unimaginative, even boring.&quot;</p>
+<ul>
+<li class="fragment">Rob Pike: talks.golang.org/2012/splash.articl</li>
+</ul>
+</section>
+<section id="section-1" class="level2">
+<h2></h2>
+<p>&quot;Most interesting thing about Go is that it's not object oriented or procedural or functional, it's its own new exciting thing&quot;</p>
+<ul>
+<li class="fragment">David Kinzer: twitter.com/dtkinzer/status/786031866478407681</li>
+</ul>
+</section>
+<section id="section-2" class="level2">
+<h2></h2>
+<p>&quot;with Go I was able to pick up programming / CS concepts rather quickly, enjoy the process, and learn a ton of things in the meantime&quot;</p>
+<ul>
+<li class="fragment">Audrey Lim: youtu.be/fZh8uCInEfw</li>
+</ul>
+</section>
+<section id="section-3" class="level2">
+<h2></h2>
+<p>&quot;Although Go is quite a small language, it is a very rich and expressive language (as measured in syntactic constructs, concepts, and idioms), so there is a surprising amount to learn.&quot;</p>
+<ul>
+<li class="fragment">Freddy Rangel: spaces-vs-tabs.com/4-weeks-of-golang-the-good-the-bad-and-the-ugly/</li>
+</ul>
+</section>
+<section id="section-4" class="level2">
+<h2></h2>
+<p>&quot;Even if you’re a dynamic language zealot, I bet you’d be shocked how productive you can be with a statically typed language like Go.&quot;</p>
+<ul>
+<li class="fragment">Blake Smith: blakesmith.me/2012/08/19/why-you-should-learn-to-program-in-go.html</li>
+</ul>
+</section>
+<section id="section-5" class="level2">
+<h2></h2>
+<p>&quot;Golang is a very pleasant language to get systems-y things done in. I'm fond of saying that it's not an amazing language, but is an amazing programming tool.&quot;</p>
+<ul>
+<li class="fragment">tptacek: news.ycombinator.com/item?id=9381093</li>
+</ul>
+</section>
+<section id="section-6" class="level2">
+<h2></h2>
+<p>&quot;When launching a new language it is important that the target audience be able to learn it quickly; rooting Go in the C family helps make sure that young programmers, most of whom know Java, JavaScript, and maybe C, should find Go easy to learn.&quot;</p>
+<ul>
+<li class="fragment">Rob Pike: talks.golang.org/2012/splash.article#TOC_12.</li>
+</ul>
+</section>
+</section>
+<section id="hello-world" class="slide level1">
+<h1>Hello World</h1>
+<section id="download" class="level2">
+<h2>Download</h2>
+<ul>
+<li class="fragment">https://golang.org/doc/install</li>
+<li class="fragment"><code>$ tar -C /usr/local -xzf go1.7.3.linux-amd64.tar.gz</code></li>
+</ul>
+</section>
+<section id="tell-shell-about-go" class="level2">
+<h2>Tell Shell about Go</h2>
+<p><code>$ export PATH=$PATH:/usr/local/go/bin</code></p>
+</section>
+<section id="tell-go-where-your-code-is" class="level2">
+<h2>Tell Go where your code is</h2>
+<p><code>$ export GOPATH=$HOME/go</code></p>
+</section>
+<section id="section-7" class="level2">
+<h2></h2>
+<pre><code>package main
+
+import &quot;fmt&quot;
+
+func main() {
+    fmt.Println(&quot;Hello, 世界&quot;)
+}</code></pre>
+</section>
+<section id="section-8" class="level2">
+<h2></h2>
+<pre><code>...
+package main
+...</code></pre>
+<p>&quot;Go encourages you to perform software composition by composing individual pieces of Go packages as an application&quot;</p>
+<ul>
+<li class="fragment">thenewstack.io/understanding-golang-packages</li>
+</ul>
+</section>
+<section id="section-9" class="level2">
+<h2></h2>
+<pre><code>...
+import &quot;fmt&quot;
+...</code></pre>
+</section>
+<section id="section-10" class="level2">
+<h2></h2>
+<pre><code>...
+func main() {
+    fmt.Println(&quot;Hello, 世界&quot;)
+}
+...</code></pre>
+</section>
+<section id="section-11" class="level2">
+<h2></h2>
+<figure>
+<img src="images/unicode.png" />
+</figure>
+</section>
+</section>
+<section id="free-tools" class="slide level1">
+<h1>Free Tools!</h1>
+<section id="go-get" class="level2">
+<h2><code>go get</code></h2>
+<ul>
+<li class="fragment"><code>go get github.com/Netflix/chaosmonkey</code></li>
+</ul>
+</section>
+<section id="go-run" class="level2">
+<h2><code>go run</code></h2>
+</section>
+<section id="go-build" class="level2">
+<h2><code>go build</code></h2>
+</section>
+<section id="go-fmt" class="level2">
+<h2><code>go fmt</code></h2>
+<ul>
+<li class="fragment">Pollution (won't allow unnused things)</li>
+<li class="fragment">Tabs vs Spaces (WHO CARES)</li>
+<li class="fragment">One standard to rule them all</li>
+</ul>
+</section>
+</section>
+<section id="syntax" class="slide level1">
+<h1>Syntax</h1>
+<section id="functions" class="level2">
+<h2>Functions</h2>
+<pre><code>func add(x int, y int) int
+func ReadByte() (c byte, err error)</code></pre>
+</section>
+<section id="variables" class="level2">
+<h2>Variables</h2>
+<pre><code>var c, python, java bool
+var i, j int = 1, 2</code></pre>
+</section>
+<section id="section-12" class="level2">
+<h2>:=</h2>
+<p>In Go, := is for declaration + assignment</p>
+<p>= is only for assignment</p>
+<p>Can also be used for shorthand execution in <code>if</code></p>
+</section>
+<section id="methods" class="level2">
+<h2>Methods</h2>
+<pre><code>  type Vertex struct {
+      X, Y float64
+  }
+
+  func (v Vertex) Abs() float64 {
+      return math.Sqrt(v.X*v.X + v.Y*v.Y)
+  }
+
+  func main() {
+      v := Vertex{3, 4}
+        fmt.Println(v.Abs())
+  }</code></pre>
+</section>
+<section id="arrays-vs-slices" class="level2">
+<h2>Arrays vs Slices</h2>
+<ul>
+<li class="fragment"><code>letters := [26]string{&quot;a&quot;,&quot;b&quot;........</code></li>
+<li class="fragment"><code>letters := []string{&quot;a&quot;,&quot;b&quot;........</code></li>
+<li class="fragment">Zero value of a slice is nil</li>
+<li class="fragment"><code>append()</code></li>
+</ul>
+</section>
+<section id="maps" class="level2">
+<h2>Maps</h2>
+<ul>
+<li class="fragment"><code>m = map[string]int{}</code></li>
+<li class="fragment"><code>m[&quot;route&quot;] = 66</code></li>
+</ul>
+</section>
+<section id="structs" class="level2">
+<h2>Structs</h2>
+<pre><code>type Vertex struct {
+  X int
+    Y int
+}
+
+func main() {
+    v := Vertex{1, 2}
+    v.X = 4
+    fmt.Println(v.X)
+}</code></pre>
+</section>
+<section id="loops" class="level2">
+<h2>Loops</h2>
+<p>For is Go's &quot;while&quot;</p>
+</section>
+<section id="defer" class="level2">
+<h2>Defer</h2>
+<p>A defer statement defers the execution of a function until the surrounding function returns.</p>
+</section>
+</section>
+<section id="csp" class="slide level1">
+<h1>CSP</h1>
+<section id="section-13" class="level2">
+<h2></h2>
+<p>https://en.wikipedia.org/wiki/Communicating_sequential_processes</p>
+</section>
+<section id="section-14" class="level2">
+<h2></h2>
+<p>&quot;Do not communicate by sharing memory; instead, share memory by communicating.&quot;</p>
+<ul>
+<li class="fragment">http://www.golangbootcamp.com/book/concurrency</li>
+</ul>
+</section>
+<section id="section-15" class="level2">
+<h2></h2>
+<pre><code>// A _goroutine_ is a lightweight thread of execution.</code></pre>
+</section>
+<section id="section-16" class="level2">
+<h2></h2>
+<pre><code>    // Suppose we have a function call `f(s)`. Here&#39;s how
+    // we&#39;d call that in the usual way, running it
+    // synchronously.
+    f(&quot;direct&quot;)</code></pre>
+</section>
+<section id="section-17" class="level2">
+<h2></h2>
+<pre><code>    // To invoke this function in a goroutine, use
+    // `go f(s)`. This new goroutine will execute
+    // concurrently with the calling one.
+    go f(&quot;goroutine&quot;)</code></pre>
+</section>
+<section id="section-18" class="level2">
+<h2></h2>
+<pre><code>    // You can also start a goroutine for an anonymous
+    // function call.
+    go func(msg string) {
+        fmt.Println(msg)
+    }(&quot;going&quot;)</code></pre>
+</section>
+<section id="section-19" class="level2">
+<h2></h2>
+<pre><code>    // Our two function calls are running asynchronously in
+    // separate goroutines now, so execution falls through
+    // to here. This `Scanln` code requires we press a key
+    // before the program exits.
+    var input string
+    fmt.Scanln(&amp;input)
+    fmt.Println(&quot;done&quot;)</code></pre>
+</section>
+<section id="channels" class="level2">
+<h2>Channels</h2>
+<p>&quot;Channels are the pipes that connect concurrent goroutines.&quot;</p>
+<ul>
+<li class="fragment">https://gobyexample.com/channels</li>
+</ul>
+</section>
+</section>
+<section id="demo-time" class="slide level1">
+<h1>Demo Time!</h1>
+<p>https://github.com/mrf/go-for-php-code</p>
+</section>
+<section id="resources" class="slide level1">
+<h1>Resources:</h1>
+<ul>
+<li class="fragment">golang.org/doc/effective_go.html</li>
+<li class="fragment">r/golang and r/learngolang</li>
+<li class="fragment">udemy.com/learn-how-to-code/</li>
+<li class="fragment">infoq.com/presentations/clojure-core-async</li>
+<li class="fragment">golang.org/doc/effective_go.html</li>
+<li class="fragment">hackerrank.com</li>
+<li class="fragment">youtu.be/fZh8uCInEfw</li>
+<li class="fragment">gitbook.com/book/gobridge/building-web-apps-with-go/details</li>
+<li class="fragment">golangbootcamp.com</li>
+<li class="fragment">tour.golang.org or |<code>go tool tour</code>|</li>
+</ul>
+</section>
+<section id="examples" class="slide level1">
+<h1>Examples</h1>
+<ul>
+<li class="fragment">https://github.com/coreos/etcd</li>
+<li class="fragment">https://github.com/docker</li>
+<li class="fragment">https://github.com/hybridgroup/gobot</li>
+</ul>
+</section>
+<section id="credits" class="slide level1">
+<h1>Credits:</h1>
+<ul>
+<li class="fragment">https://github.com/eosrei/rjsmake</li>
+<li class="fragment">http://reneefrench.blogspot.com/</li>
+</ul>
+</section>
+    </div>
+  </div>
+
+
+  <script src="reveal.js/lib/js/head.min.js"></script>
+  <script src="reveal.js/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,         // Display controls in the bottom right corner
+        progress: true,         // Display a presentation progress bar
+        history: true,          // Push each slide change to the browser history
+        center: false,                       // Vertical centering of slides
+        maxScale: 1.5,                  // Bounds for smallest/largest possible content scale
+        slideNumber: false,                // Display the page number of the current slide
+        theme: 'simple', // available themes are in /css/theme
+        transition: 'convex', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+//          { src: 'reveal.js/plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; }, }
+//          { src: 'reveal.js/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+]});
+    </script>
+    </body>
+</html>

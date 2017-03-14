@@ -108,7 +108,7 @@ func main() {
 ## `go build`
 
 ## `go fmt`
-- Pollution (won't allow unnused things)
+- Pollution (won't allow unused things)
 - Tabs vs Spaces (WHO CARES)
 - One standard to rule them all
 
@@ -145,7 +145,7 @@ Can also be used for shorthand execution in `if`
 
   func main() {
       v := Vertex{3, 4}
-        fmt.Println(v.Abs())
+      fmt.Println(v.Abs())
   }
 ```
 
